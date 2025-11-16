@@ -1,87 +1,55 @@
-**EdgeTrader · AI Swing Trading Engine**
-ML signals • Agentic forecasting • LLM reasoning • Portfolio-ready architecture
+##EdgeTrader AI
 
-EdgeTrader is a full-stack autonomous swing-trading system designed initially for NVDA.
-It combines:
+## 🚀 Inspiration
 
-RandomForest ML trading signals
+I wanted to build an intelligent trading assistant that doesn’t just output BUY or SELL signals, but actually reasons like a human analyst. Most trading tools only show indicators — I wanted a system that explains *why*. This led to building an agentic AI that blends ML signals, price action, sentiment analysis, and an LLM reasoning layer.
 
-Candlestick & pattern detection
+## 📈 What it does
 
-Sentiment scoring
+EdgeTrader AI generates swing-trading recommendations using:
+- RandomForest model predictions  
+- Candlestick pattern recognition  
+- Sentiment scoring  
+- Dynamic holding horizon selection  
+- Monte-Carlo forecasting  
 
-Monte Carlo agentic forecasting
+It also uses an LLM layer to evaluate market context and deliver human-like reasoning for every recommendation.
 
-Local LLM evaluation (Ollama)
+Currently, it is tuned for **NVDA**, but the architecture is designed to expand to **all stocks** and eventually manage **entire trading portfolios**.
 
-Full React + FastAPI implementation
+## 🛠️ How we built it
 
-Although the engine is currently tuned and optimized for NVDA, the architecture is fully extensible:
+- **Backend:** FastAPI powering ML inference, pattern extraction, sentiment analysis, trend scoring, and simulation forecasts  
+- **Frontend:** React + ApexCharts for candlestick charts, price projections, and agentic insights  
+- **LLM Layer:** Local Ollama models for contextual evaluation and natural-language reasoning  
+- **ML Models:** RandomForest-based BUY/HOLD/SELL classifier trained on NVDA historical data  
 
-🚀 Upcoming goal: Expand EdgeTrader into a multi-asset intelligence platform with
-AAPL · TSLA · SPY · QQQ · ETH · BTC…
-and build a portfolio-position sizing + risk management layer for end-to-end trading.
+## ⚠️ Challenges we ran into
 
-📌 Features
-🔥 1. ML-Powered Trading Signals
+- Keeping LLM outputs consistent and non-hallucinatory  
+- Managing complex React state across multiple async endpoints  
+- Extracting meaningful patterns from noisy candlestick data  
+- Designing a clean UI despite many insights  
+- Ensuring responsiveness while running multiple models  
 
-RandomForest classifier trained on NVDA historical data
+## 🏆 Accomplishments that we're proud of
 
-Predicts BUY / SELL / HOLD
+- Blending ML forecasts, sentiment, price patterns, and LLM reasoning in one system  
+- Achieving interpretable explanations rather than black-box outputs  
+- Building a smooth, modern interface with data + reasoning visualized  
+- Designing a modular pipeline that scales beyond NVDA  
 
-Confidence score + probability distribution
+## 📚 What we learned
 
-Provides pattern-aware explanations
+- How ML + LLM hybrid systems improve interpretability and decision quality  
+- Importance of robust preprocessing for stable predictions  
+- Deep insights into candlestick structures and trend modeling  
+- How to design an agentic workflow that feels interactive and intelligent  
 
-📈 2. Candlestick Pattern Engine
+## 🔮 What’s next for EdgeTrader AI
 
-Detects 20+ price-action patterns
-
-Highlights strongest recent signals
-
-Integrates with the LLM reasoning stage
-
-🌤 3. Agentic Monte-Carlo Forecasting
-
-Simulates future paths using volatility-adaptive sampling
-
-Generates:
-
-P10 (Worst Case)
-
-P50 (Median Case)
-
-P90 (Best Case)
-
-Automatically selects horizon based on trend strength
-
-Sentiment-adjusted
-
-🧠 4. LLM Evaluator (Ollama)
-
-Reads the full market context
-
-Interprets ML signals, patterns, trend, sentiment
-
-Produces a human-like market explanation
-
-Helps validate/override ML signal using reasoning
-
-💼 5. Portfolio Expansion (Upcoming)
-
-Planned modules include:
-
-Multi-ticker support
-
-Dynamic position sizing
-
-Entry-price tracking per ticker
-
-Risk-weighted allocation
-
-P&L monitoring
-
-Portfolio-level LLM reporting
-
-(The current version includes NVDA-only inference, but backend design is already ticker-agnostic.)
-
+- Expanding beyond NVDA to all major stocks  
+- Building a portfolio-level AI manager for allocations and rebalancing  
+- Adding real-time market streaming + automated alerts  
+- Integrating broker APIs for paper trading and later full execution  
+- Training improved custom models tailored to each stock’s behavior  
