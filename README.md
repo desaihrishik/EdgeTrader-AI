@@ -1,4 +1,4 @@
-EdgeTrader · AI Swing Trading Engine
+**EdgeTrader · AI Swing Trading Engine**
 ML signals • Agentic forecasting • LLM reasoning • Portfolio-ready architecture
 
 EdgeTrader is a full-stack autonomous swing-trading system designed initially for NVDA.
@@ -84,3 +84,4 @@ P&L monitoring
 Portfolio-level LLM reporting
 
 (The current version includes NVDA-only inference, but backend design is already ticker-agnostic.)
+
